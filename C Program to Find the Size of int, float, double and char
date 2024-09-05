@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    //determine and print the size of int
+    printf("size of int: %u bytes\n", sizeof(int));
+    //determine and print the size of float
+    printf("size of float: %u bytes\n", sizeof(float));
+    //determine and print the size of double
+    printf("size of double: %u bytes\n", sizeof(double));
+    //determine and print the size of char
+    printf("size of char: %u bytes\n", sizeof(char));
+    return 0;
+}
