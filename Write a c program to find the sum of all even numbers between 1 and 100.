@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, start = 1, end = 100, sum=0;
+    
+    if(start%2!=0)
+    {
+        start++;
+    }
+
+    for(i=start; i<=end; i+=2)
+    {
+        /* Add current even number to sum */
+        sum += i;
+    }
+
+    printf("Sum of all even number between %d to %d = %d", start, end, sum);
+
+    return 0;
+}
