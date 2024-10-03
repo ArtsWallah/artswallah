@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, start = 1, end = 100, sum=0;
+
+    for(i=start; i<=end; i+=2)
+    {
+        /* Add current even number to sum */
+        if( i % 2 != 0)
+            sum += i;
+    }
+
+    printf("Sum of all odd number between %d to %d = %d", start, end, sum);
+
+    return 0;
+}
