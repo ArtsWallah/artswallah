@@ -20,8 +20,8 @@ string remVowel(string str)
   
 int main()  
 { 
-    string str = "GeeeksforGeeks - A Computer"
-                 " Science Portal for Geeks"; 
+    string str = "Artswallah"
+                 "Ronaldo is the goat"; 
     cout << remVowel(str) << endl; 
   
     return 0; 
