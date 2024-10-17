@@ -1,0 +1,123 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define r1 2
+#define c1 3
+#define r2 3
+#define c2 2
+
+void Matrix_mul (int mat1[][c1], int mat2[][c2])
+{
+  int mul[r1][c2];
+  printf ("Multiplication of given two matrices is:\n");
+  for (int i = 0; i < r1; i++)
+    {
+      for (int j = 0; j < c2; j++)
+	{
+	  mul[i][j] = 0;
+	  for (int k = 0; k < r2; k++)
+	    {
+	      mul[i][j] += mat1[i][k] * mat2[k][j];
+	    }
+	  printf ("%d\t", mul[i][j]);
+	}
+      printf ("\n");
+    }
+}
+
+int main ()
+{
+  int mat1[r1][c1] = { {0, 1, 2}, {3, 4, 5} };
+  int mat2[r2][c2] = { {1, 2}, {3, 4}, {5, 6} };
+  int mul[r1][c2], i, j, k;
+
+  printf ("matrix 1 is :\n");
+  for (i = 0; i < r1; i++)
+    {
+      for (j = 0; j < c1; j++)
+	{
+	  printf ("%d   ", mat1[i][j]);
+	  if (j == 3 - 1)
+	    {
+	      printf ("\n\n");
+	    }
+	}
+    }
+
+  printf ("matrix 2 is :\n");
+  for (i = 0; i < r2; i++)
+    {
+      for (j = 0; j < c2; j++)
+	{
+	  printf ("%d   ", mat2[i][j]);
+	  if (j == 2 - 1)
+	    {
+	      printf ("\n\n");
+	    }
+	}
+    }
+
+  Matrix_mul (mat1, mat2);
+  return 0;
+}#include <stdio.h>
+#include <stdlib.h>
+
+#define r1 2
+#define c1 3
+#define r2 3
+#define c2 2
+
+void Matrix_mul (int mat1[][c1], int mat2[][c2])
+{
+  int mul[r1][c2];
+  printf ("Multiplication of given two matrices is:\n");
+  for (int i = 0; i < r1; i++)
+    {
+      for (int j = 0; j < c2; j++)
+	{
+	  mul[i][j] = 0;
+	  for (int k = 0; k < r2; k++)
+	    {
+	      mul[i][j] += mat1[i][k] * mat2[k][j];
+	    }
+	  printf ("%d\t", mul[i][j]);
+	}
+      printf ("\n");
+    }
+}
+
+int main ()
+{
+  int mat1[r1][c1] = { {0, 1, 2}, {3, 4, 5} };
+  int mat2[r2][c2] = { {1, 2}, {3, 4}, {5, 6} };
+  int mul[r1][c2], i, j, k;
+
+  printf ("matrix 1 is :\n");
+  for (i = 0; i < r1; i++)
+    {
+      for (j = 0; j < c1; j++)
+	{
+	  printf ("%d   ", mat1[i][j]);
+	  if (j == 3 - 1)
+	    {
+	      printf ("\n\n");
+	    }
+	}
+    }
+
+  printf ("matrix 2 is :\n");
+  for (i = 0; i < r2; i++)
+    {
+      for (j = 0; j < c2; j++)
+	{
+	  printf ("%d   ", mat2[i][j]);
+	  if (j == 2 - 1)
+	    {
+	      printf ("\n\n");
+	    }
+	}
+    }
+
+  Matrix_mul (mat1, mat2);
+  return 0;
+}
