@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+#define ROW 3
+#define COL 3
+
+// Function to take input for a matrix
+void inputMatrix(int matrix[ROW][COL], int row, int col) {
+    printf("Enter elements of the matrix:\n");
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            printf("Element at [%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+}
+
+// Function to add two matrices
+void addMatrices(int matrix1[ROW][COL], int matrix2[ROW][COL], int result[ROW][COL], int row, int col) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+}
+
+// Function to print a matrix
+void printMatrix(int matrix[ROW][COL], int row, int col) {
+    printf("Matrix:\n");
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int matrix1[ROW][COL], matrix2[ROW][COL], result[ROW][COL];
+
+    // Input matrices
+    printf("Input for Matrix 1:\n");
+    inputMatrix(matrix1, ROW, COL);
+
+    printf("Input for Matrix 2:\n");
+    inputMatrix(matrix2, ROW, COL);
+
+    // Add matrices
+    addMatrices(matrix1, matrix2, result, ROW, COL);
+
+    // Print the result
+    printf("Sum of the two matrices:\n");
+    printMatrix(result, ROW, COL);
+
+    return 0;
+}
